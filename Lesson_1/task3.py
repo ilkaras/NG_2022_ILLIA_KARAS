@@ -6,7 +6,7 @@ Ammount = int(Ammount - Hours * 3600)
 Minutes = int(Ammount / 60)
 Ammount = int(Ammount - Minutes * 60)
 Seconds = int(Ammount)
-print ("Days: " + str(int(Days)) + "  Hours: " + str(int(Hours)) + "   Minutes: " + str(int(Minutes)) + "   Secounds: " +str(int(Seconds)))
+print ("Days: " + str(Days) + "  Hours: " + str(Hours) + "   Minutes: " + str(Minutes) + "   Secounds: " +str(Seconds))
 
 
 

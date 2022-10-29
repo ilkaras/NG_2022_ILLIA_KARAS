@@ -1,0 +1,6 @@
+a = float(input("Type a: "))
+b = float(input("Type b: "))
+c = float(input("Type c: "))
+D = float(b * b - 4 * a * c)
+print ("x1= " + str((- b + D ** 0.5) / 2 * a))
+print ("x1= " + str((- b - D ** 0.5) / 2 * a))
