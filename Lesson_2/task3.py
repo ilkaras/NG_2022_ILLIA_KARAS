@@ -1,8 +1,8 @@
-a = int(input("Enter your number: "))
-while a > 0:
-    b = a
-    while b > 0:
-        print(b, end=" ")
-        b = b - 1
+First_number = int(input("Enter your number: "))
+while First_number > 0:
+    Other_numbers = First_number
+    while Other_numbers > 0:
+        print(Other_numbers, end=" ")
+        Other_numbers = Other_numbers - 1
     print(end="\n")
-    a = a - 1
+    First_number = First_number - 1
