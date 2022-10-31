@@ -7,13 +7,3 @@ Minutes = int(Ammount / 60)
 Ammount = (Ammount - Minutes * 60)
 Seconds = (Ammount)
 print ("Days: " + str(Days) + "  Hours: " + str(Hours) + "   Minutes: " + str(Minutes) + "   Seconds: " +str(Seconds), end="")
-
-
-
-
-
-
-
-
-
- 
