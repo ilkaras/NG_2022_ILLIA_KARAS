@@ -1,3 +1,4 @@
+print ("Program started, enter your number: ")
 Number = int(input())
 dobutok = 1
 faktorial = 1
