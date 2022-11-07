@@ -5,7 +5,7 @@ def info(message):
     log ("INFO", message)
 
 def AskString(message):
-    return input(message).split(" ")
+    return input(message)
 
 def Actions():
     print("[1] Sort string")
@@ -21,10 +21,12 @@ def Choise():
 
 def Sample(number, Text):
     if number == 1:
+        Text = Text.split(" ")
         Text.sort()
         return Text
     elif number == 2:
-        SecondFunktion()
+        Text = len(Text)
+        return Text
 
 def main():
     info("Program started")
