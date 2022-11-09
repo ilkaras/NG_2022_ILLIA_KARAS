@@ -27,6 +27,36 @@ def Sample(number, Text):
     elif number == 2:
         Text = len(Text)
         return Text
+    elif number == 3:
+        VariatnOfLetters = int(input("consonants [1] or vowels [2] ? : "))
+        if VariatnOfLetters == 1:
+            lst = ['A', 'E', 'I', 'O', 'U', 'Y', 'a', 'e', 'i', 'o', 'u', 'y']
+            for element in lst:
+                while element in Text:
+                    Text = Text.replace(element, '')
+        elif VariatnOfLetters == 2:
+            lst = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P',
+             'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z','b', 'c', 'd', 'f', 'g', 'h',
+              'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
+            for element in lst:
+                while element in Text:
+                    Text = Text.replace(element, '')
+        return Text
+    elif number == 4:
+        TextList = Text.split()
+        TextList.reverse()
+        return TextList
+    elif number == 5:
+        TextList = Text.split()
+        WordNumber = int(input("Enter number of word: "))
+        NumberedWord = TextList[WordNumber - 1]
+        return NumberedWord
+    elif number == 6:
+        return Text
+    elif number == 7:
+        Exit = "!!!Program closed!!!"
+        return Exit
+
 
 def main():
     info("Program started")
