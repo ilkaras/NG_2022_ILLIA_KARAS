@@ -1,6 +1,12 @@
-alphabet = "zyxwvutsrqponmlkjihgfedcba"
-numbeOfChange = int(input("Change order: "))
-Text = input("Write your text: ")
-change = str.maketrans(alphabet, alphabet[numbeOfChange:]+alphabet[:numbeOfChange])
-translation = Text.translate(change)
-print('Result: "' + translation + '"') 
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+text = input("Input your text: ")
+ChangeOrder = int(input("Enter change order: "))
+transferedText = " "
+for element in text:
+    stockOrder = alphabet.find(element)
+    NewText = stockOrder + ChangeOrder
+    if element in alphabet:
+        transferedText += alphabet[NewText]
+    else:
+        transferedText += element
+print("Translated text: " + "\n" + str(transferedText))
