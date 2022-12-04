@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome!</title>
+    </head>
+    <style>
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width:150px;
+        height:50px;
+    }
+    .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+    }
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .button2 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+    }
+    .button2:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+    .button3 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #FF5733;
+    }
+    .button3:hover {
+        background-color: #FF5733;
+        color: white;
+    }
+    .button4 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #E633FF;
+    }
+    .button4:hover {
+        background-color: #E633FF;
+        color: white;
+    }
+    .button5 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #F9FF33;
+    }
+    .button5:hover {
+        background-color: #F9FF33;
+        color: white;
+    }
+    .button6 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #33FFB8;
+    }
+    .button6:hover {
+        background-color: #33FFB8;
+        color: white;
+    }
+    .button7 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #949997;
+    }
+    .button7:hover {
+        background-color: #949997;
+        color: black;
+    }
+    .button8 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #0A100E;
+    }
+    .button8:hover {
+        background-color: #0A100E;
+        color: white;
+    }
+   
+    </style>
+    <body>
+        <form action="/process">
+            <h1> Calculator</h1>
+            <textarea name="data" rows="5" cols="56" ></textarea>
+            <p> <button class="button button1" value="plus" name="operation" type="submit">+</button>
+                <button class="button button2" value="minus" name="operation" type="submit">-</button>
+                <button class="button button3" value="multiply" name="operation" type="submit">*</button> </p>
+            <p> <button class="button button4" value="devide" name="operation" type="submit">/</button>
+                <button class="button button5" value="v stepen" name="operation" type="submit">v stepen</button>
+                <button class="button button6" value="pod koren" name="operation" type="submit">pod koren</button> </p>
+            <p> <button class="button button7" value="Clear" name="operation" type="submit">Clear</button>
+                <button class="button button8" value="Result" name="operation" type="submit">Result</button> </p>
+        </form>
+        <div>
+            {{contents|safe}}
+        </div>
+    </body>
+</html>
