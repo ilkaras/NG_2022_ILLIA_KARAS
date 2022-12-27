@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+    </head>
+    <style>
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width:150px;
+        height:50px;
+    }
+    .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #ff7433;
+    }
+    .button1:hover {
+        background-color: #ff7433;
+        color: white;
+    }
+
+   
+    </style>
+    <body>
+        <form action="/admin">
+            <p>Chose what article you want to delete</p>
+            <p><input type="number" min=0  value=0 align = center name="variant" rows="2" cols="20"/ ></p>
+            <p> <button class="button button1" value="del" name="Delete" type="submit">  Delete  </button>
+            <p align = center>Click<a href="posts">HERE</a>  to see all posts</p>
+            <p align = center>If you want to post your own post you can use  <a href="editor">THIS</a>  link</p>
+
+        </form>
+        <div>
+            {{contents|safe}}
+        </div>  
+    </body>
+</html>

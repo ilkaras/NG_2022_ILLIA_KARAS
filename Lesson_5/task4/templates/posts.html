@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All posts</title>
+    </head>
+    <style>
+        *{
+            font-family: Arial;
+        }
+        .title{
+            text-align:center;
+            font-size: 22px;
+        }
+        .data {
+            text-align:center;
+        }
+        .time {
+            text-align:right;
+            margin-top: 10px ;
+
+        }
+        
+    </style>
+    <body>
+        <form action='/posts'>
+            
+            <h1 align = center> All posts</h1>
+            <p align = center>If you want to post your own post you can use  <a href="editor">THIS</a>  link</p>
+
+            
+        </form>
+        <div>
+            {{contents|safe}}
+        </div>  
+    </body>
+</html>
