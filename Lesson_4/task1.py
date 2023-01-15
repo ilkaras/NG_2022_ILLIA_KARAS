@@ -1,4 +1,5 @@
 from rich.console import Console
+import psutil
 import platform
 
 console = Console()
@@ -6,13 +7,15 @@ entries = []
 
 specification = {
     "Computer network name": platform.node(),
-    "Machine type": platform.machine(),
-    "Processor type": platform.processor(),
+    "Machine type": (str(platform.machine()) + "  "+ str(platform.processor())),
+    "Processor": (str(platform.processor()) + "  " + "Phisical cores: " + str(psutil.cpu_count(logical=True))
+     + "  " + "Logical processors:  " + str(psutil.cpu_count(logical=False))),
     "Platform type": platform.platform(),
-    "Operating system": platform.system(),
-    "Operating system": platform.release(),
-    "Operating system release": platform.version()
-}
+    "Memory": (str(psutil.virtual_memory()) + str(psutil.swap_memory( ))),
+    "Operating system release": platform.version(),
+    "Disk": str(psutil.disk_io_counters(perdisk=False, nowrap=True)),
+    }      
+    
 for key in specification.keys():
     entries.append(key)
 
