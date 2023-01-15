@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All posts</title>
+    </head>
+    <style>
+        #chat{
+            border:none;
+            width:100%;
+            height:auto;
+            resize:none;
+        }
+    </style>
+    <body>
+        <h1 text-align:center> Chat</h1>
+        
+        <form action='/send'>
+            <h3>Login</h1>
+            <p><textarea  text-align:center name="login" rows="3" cols="45" ></textarea></p>
+            <h3>Message</h1>
+            <p><textarea  text-align:center name="message" rows="3" cols="45" ></textarea></p>
+            <p> <button  value="Add" type="submit">   Send  </button>
+            <button  formaction="/delete" value="Delete" type="submit">   Delete  </button>
+        </form>
+        <h3>Here will be your messages</h1>
+        <div  text-align:center id="chat" readonly>{{messages|safe}}</div>
+    </body>
+    <script>
+        
+        window.setInterval(() => {
+            databaseWorker.getMessage();
+        }, 300);
+    </script>
+</html>

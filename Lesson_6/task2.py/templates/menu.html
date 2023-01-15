@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+    </head>
+    <body>
+        <h>Choose what options you need</h>
+        <form action='/getdata'>
+            {{checkboxes|safe}}
+            <button> Select </button>
+        </form>
+        <div>
+            {{contents|safe}}
+        </div>  
+    </body>
+</html>
