@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <form action="/manager">
+            <textarea name="data" rows="2" cols="45" ></textarea>
+            <p><button>Make zip file!</button></p>
+            <h3>Use this link to download zip file</h3>
+            <a href="{{url_for('download_file')}}">Download File!</a>
+        </form>
+        <div>
+            {{contents|safe}}
+        </div>
+    </body>
+</html>
