@@ -3,14 +3,16 @@ import itertools
 
 def decryptor(string,length,Hash):
     if len(Hash) == 64:
-        for element in itertools.product(string,repeat=length):
-            passwd="".join(element)
-            if Hash == sha256(passwd.encode()).hexdigest():
-                print(Hash+" : "+ passwd)
-                quit()
-        length+=1
+        while True:
+            for element in itertools.product(string,repeat=length):
+                passwd="".join(element)
+                if Hash == sha256(passwd.encode()).hexdigest():
+                    print(Hash+" : "+ passwd)
+                    quit()
+            length+=1
     else:
         print("Something wrong with your hash, try againg pleas!")
+
 
 def main():
     Hash= input("Paste your hash: ")
