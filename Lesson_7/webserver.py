@@ -49,22 +49,22 @@ def process(url,threadNumber):
         else:
             file_name = file_name_temp
         if '.jpg' in image_path:
-            c_wd = os.getcwd()
+            image = os.getcwd()
             try:
                 os.makedirs('Images/JPEG')
             except:
-                folder_dir = c_wd + '/Images/JPEG'
+                folder_dir = image + '/Images/JPEG'
                 name_file = "{}.jpg".format(file_name)
                 final_path = os.path.join(folder_dir, name_file)
                 with open(final_path , 'wb') as f:
                     f.write(requests.get(image_path).content)
                     print ("Thread #" + str(threadNumber)+ ": jpg")
         if '.png' in image_path:
-            c_wd = os.getcwd()
+            image = os.getcwd()
             try:
                 os.makedirs('Images/PNG')
             except:
-                folder_dir = c_wd + '/Images/PNG'
+                folder_dir = image + '/Images/PNG'
                 name_file = "{}.png".format(file_name)
                 final_path = os.path.join(folder_dir, name_file)
                 with open(final_path , 'wb') as f:
